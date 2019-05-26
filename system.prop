@@ -1,29 +1,5 @@
 #
-# system.prop for Panasonic P55Novo
-#
-
-# RIL
-rild.libpath=/system/lib/mtk-ril.so
-rild.libargs=-d /dev/ttyC0
-
-ro.telephony.ril_class=MediaTekRIL
-ro.telephony.ril.config=fakeiccid
-
-ril.radiooff.poweroffMD=0
-ril.specific.sm_cause=0
-ril.external.md=0
-ril.current.share_modem=2
-ril.first.md=1
-ril.flightmode.poweroffMD=1
-ril.telephony.mode=0
-ril.radiooff.poweroffMD=0
-ril.active.md=0
-
-persist.radio.fd.counter=15
-persist.radio.fd.off.counter=5
-persist.radio.fd.r8.counter=15
-persist.radio.fd.off.r8.counter=5
-persist.radio.multisim.config=dsds
+# system.prop for etab5
 
 mux.debuglog.enable=1
 
@@ -32,11 +8,9 @@ wifi.interface=wlan0
 wifi.tethering.interface=ap0
 wifi.direct.interface=p2p0
 
-# FM Radio
-fmradio.driver.enable=1
 
 # LCD density
-ro.sf.lcd_density=270
+ro.sf.lcd_density=220
 
 # Graphics
 ro.opengles.version=131072

@@ -1,25 +1,25 @@
 # Device path
-DEVICE_PATH := device/Panasonic/P55Novo
+DEVICE_PATH := device/generalmobile/etab5
 
 # Vendor path
-VENDOR_PATH := vendor/Panasonic/P55Novo
+VENDOR_PATH := vendor/generalmobile/etab5
 
 # Release name
-PRODUCT_RELEASE_NAME := P55Novo
+PRODUCT_RELEASE_NAME := etab5
 
 # Inherit some common LineageOS stuff.
-$(call inherit-product, vendor/cm/config/common_full_phone.mk)
+$(call inherit-product, vendor/cm/config/common_full_tablet_wifionly.mk)
 
 # Inherit device configuration
 $(call inherit-product, $(DEVICE_PATH)/device.mk)
 
 # Boot animation
-TARGET_SCREEN_HEIGHT := 1280
-TARGET_SCREEN_WIDTH := 720
+TARGET_SCREEN_HEIGHT := 1920
+TARGET_SCREEN_WIDTH := 1200
 
 # Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := P55Novo
-PRODUCT_NAME := lineage_P55Novo
-PRODUCT_BRAND := Panasonic
-PRODUCT_MODEL := Panasonic P55 Novo by Shivom Techdroid
-PRODUCT_MANUFACTURER := MediaTek
+PRODUCT_DEVICE := etab5
+PRODUCT_NAME := lineage_etab5
+PRODUCT_BRAND := GeneralMobile
+PRODUCT_MODEL := E-TAB5
+PRODUCT_MANUFACTURER := General Mobile

@@ -1,6 +1,7 @@
 import init.mt6592.usb.rc
 import init.modem.rc
 
+
  on early-init
     write /sys/class/leds/lcd-backlight/trigger "backlight"
 
@@ -58,6 +59,31 @@ on init
     chown gps gps /sys/class/gpsdrv/gps/pwrsave
     chown gps gps /sys/class/gpsdrv/gps/status
 
+
+    #Camera
+    chmod 0660 /dev/camera-sysram
+    chmod 0660 /dev/camera-isp
+    chmod 0660 /dev/camera-pipemgr
+    chmod 0660 /dev/kd_camera_hw
+    chmod 0660 /dev/kd_camera_flashlight
+    chmod 0660 /dev/kd_camera_hw_bus2
+    chmod 0660 /dev/FM50AF
+    chmod 0660 /dev/DW9718AF
+    chmod 0660 /dev/OV8825AF
+    chmod 0660 /dev/CAM_CAL_DRV
+    chown system camera /dev/camera-sysram
+    chown system camera /dev/camera-isp
+    chown system camera /dev/camera-pipemgr
+    chown system camera /dev/kd_camera_hw
+    chown system camera /dev/kd_camera_flashlight
+    chown system camera /dev/kd_camera_hw_bus2
+    chown system camera /dev/FM50AF
+    chown system camera /dev/DW9718AF
+    chown system camera /dev/OV8825AF
+    chown system camera /dev/CAM_CAL_DRV
+
+
+
     # Thermal
     #change permissions on thermal devices
     chown root system /proc/mtktscpu/mtktscpu
@@ -86,31 +112,6 @@ on init
     chmod 0444 /dev/mtk_jpeg
     chown system camera /dev/mtk_jpeg
 
-
-    #Camera
-    chmod 0660 /dev/camera-sysram
-    chmod 0660 /dev/camera-isp
-    chmod 0660 /dev/camera-pipemgr
-    chmod 0660 /dev/kd_camera_hw
-    chmod 0660 /dev/kd_camera_flashlight
-    chmod 0660 /dev/kd_camera_hw_bus2
-    chmod 0660 /dev/FM50AF
-    chmod 0660 /dev/DW9718AF
-    chmod 0660 /dev/BU6424AF
-    chmod 0660 /dev/OV8825AF
-    chmod 0660 /dev/CAM_CAL_DRV
-
-    chown system camera /dev/camera-sysram
-    chown system camera /dev/camera-isp
-    chown system camera /dev/camera-pipemgr
-    chown system camera /dev/kd_camera_hw
-    chown system camera /dev/kd_camera_flashlight
-    chown system camera /dev/kd_camera_hw_bus2
-    chown system camera /dev/FM50AF
-    chown system camera /dev/DW9718AF
-    chown system camera /dev/BU6424AF
-    chown system camera /dev/OV8825AF
-    chown system camera /dev/CAM_CAL_DRV
 
     chown system system /dev/RT_Monitor
     chmod 0600 /dev/RT_Monitor

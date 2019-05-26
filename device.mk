@@ -1,11 +1,11 @@
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
 
 # The gps config appropriate for this device
 $(call inherit-product, device/common/gps/gps_us_supl.mk)
 
 $(call inherit-product-if-exists, $(VENDOR_PATH)/vendor.mk)
 
-PRODUCT_CHARACTERISTICS := default
+PRODUCT_CHARACTERISTICS := tablet,nosdcard
 
 DEVICE_PACKAGE_OVERLAYS += $(DEVICE_PATH)/overlay
 
@@ -64,7 +64,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/rootdir/enableswap.sh:root/enableswap.sh \
     $(DEVICE_PATH)/rootdir/fstab.mt6592:root/fstab.mt6592 \
-    $(DEVICE_PATH)/rootdir/init.modem.rc:root/init.modem.rc \
     $(DEVICE_PATH)/rootdir/init.mt6592.rc:root/init.mt6592.rc \
     $(DEVICE_PATH)/rootdir/init.mt6592.usb.rc:root/init.mt6592.usb.rc \
     $(DEVICE_PATH)/rootdir/ueventd.mt6592.rc:root/ueventd.mt6592.rc \
@@ -108,16 +107,12 @@ PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/mtk-kpd.kl:system/usr/keylayout/mtk-kpd.kl
 
 # Camera app
-PRODUCT_PACKAGES += Snap
+PRODUCT_PACKAGES += \
+     Camera2
 
  # Charger
   PRODUCT_PACKAGES += \
     charger_res_images
-
-# FM Radio app
-PRODUCT_PACKAGES += \
-    FMRadio \
-    libfmjni
 
 # Substratum
 PRODUCT_PACKAGES += \
@@ -135,11 +130,11 @@ PRODUCT_COPY_FILES += \
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += persist.sys.usb.config=mtp
 
 # AAPT
-PRODUCT_AAPT_CONFIG := normal
+PRODUCT_AAPT_CONFIG := xlarge
 PRODUCT_AAPT_PREF_CONFIG := hdpi
 
 PRODUCT_PACKAGES += \
     librs_jni \
     com.android.future.usb.accessory
 
-$(call inherit-product, frameworks/native/build/phone-hdpi-512-dalvik-heap.mk)
+$(call inherit-product, frameworks/native/build/tablet-10in-xhdpi-2048-dalvik-heap.mk)
