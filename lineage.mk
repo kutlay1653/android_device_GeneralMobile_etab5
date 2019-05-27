@@ -8,7 +8,7 @@ VENDOR_PATH := vendor/generalmobile/etab5
 PRODUCT_RELEASE_NAME := etab5
 
 # Inherit some common LineageOS stuff.
-$(call inherit-product, vendor/cm/config/common_full_tv.mk.mk)
+$(call inherit-product, vendor/cm/config/common_full_tablet_wifionly.mk)
 
 # Inherit device configuration
 $(call inherit-product, $(DEVICE_PATH)/device.mk)

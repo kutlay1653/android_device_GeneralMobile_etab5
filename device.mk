@@ -1,6 +1,10 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
+<<<<<<< HEAD
 $(call inherit-product, device/google/atv/products/atv_base.mk)
 $(call inherit-product, $(VENDOR_PATH)/vendor.mk)
+=======
+
+>>>>>>> parent of 5b12f59... etab5:[TEMP]AndroidTV
 # The gps config appropriate for this device
 $(call inherit-product, device/common/gps/gps_us_supl.mk)
 
