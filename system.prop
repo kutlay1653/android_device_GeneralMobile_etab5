@@ -1,6 +1,6 @@
 #
 # system.prop for etab5
-
+persist.radio.noril=1
 mux.debuglog.enable=1
 
 # WiFi

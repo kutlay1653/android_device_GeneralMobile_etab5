@@ -1,4 +1,5 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
+
 $(call inherit-product, $(VENDOR_PATH)/vendor.mk)
 
 # The gps config appropriate for this device

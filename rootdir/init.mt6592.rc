@@ -627,3 +627,7 @@ on property:sys.perf.profile=2
   service enableswap /system/bin/sh /enableswap.sh
   class core
   oneshot
+
+# Disable RIL
+on property:persist.radio.noril=1
+    setprop ro.radio.noril 1
