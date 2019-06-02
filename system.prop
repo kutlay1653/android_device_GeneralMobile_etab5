@@ -21,4 +21,4 @@ ro.zygote.preload.enable=0
 # Disable dirty region for Mali
 debug.hwui.render_dirty_regions=false
 
-qemu.hw.mainkeys=1
+qemu.hw.mainkeys=0

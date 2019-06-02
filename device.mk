@@ -132,9 +132,6 @@ PRODUCT_COPY_FILES += \
 # USB
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += persist.sys.usb.config=mtp
 
-#SU
-WITH_SU := true
-
 # AAPT
 PRODUCT_AAPT_CONFIG := xlarge
 PRODUCT_AAPT_PREF_CONFIG := hdpi
