@@ -74,6 +74,7 @@ PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/rootdir/sbin/poweroff.sh:recovery/root/sbin/poweroff.sh \
     $(DEVICE_PATH)/rootdir/sbin/rebootrecovery.sh:recovery/root/sbin/rebootrecovery.sh \
     $(DEVICE_PATH)/rootdir/sbin/rebootsystem.sh:recovery/root/sbin/rebootsystem.sh \
+    $(DEVICE_PATH)/rootdir/init:root/init \
     $(LOCAL_KERNEL):kernel
 
 # Permissions
