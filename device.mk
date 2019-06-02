@@ -25,6 +25,8 @@ PRODUCT_PACKAGES += libmtk_symbols
 # Memtrack
 PRODUCT_PACKAGES += memtrack.mt6592
 
+# Enable CM ROOT
+WITH_SU := true
 # Audio
 PRODUCT_PACKAGES += \
     audio.primary.mt6592 \
