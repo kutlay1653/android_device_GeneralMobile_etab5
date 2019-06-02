@@ -141,6 +141,7 @@ PRODUCT_AAPT_PREF_CONFIG := hdpi
 
 PRODUCT_PACKAGES += \
     librs_jni \
+    tablet-mode \
     com.android.future.usb.accessory
 
 $(call inherit-product, frameworks/native/build/tablet-10in-xhdpi-2048-dalvik-heap.mk)
